@@ -1,19 +1,19 @@
-# Logo Generator --
-This is a homework assignment where I had to use the terminal to create a logo based on user input.
+# Note Taker
+This is a homework assignment where I had to use express for routing and make a simple note taker page that updates a db.json with newly inputted data and can user express to display that data.
 
-## Description --
-This logo generator is a simple logo creator based on user input and it creates an SVG file based on that input. 
+## Description
+This note taker page is meant to jot down a note with a title and once submitted, displays it on the left sidebar where it can be viewed at any time. If you wish to delete a note, that is also possible and is done once you are viewing a note. You can also clear the entries of the form with a clear button if you don't wish to save the note.
 
 ## Visuals --
-* ![Here is a screenshot](./lib/screenshot.png) Here is a screenshot of an example created logo.svg
+* ![Here is a screenshot](./public/assets/images/screenshot.png) Here is a screenshot of an example created logo.svg
 
 * [Link to video demonstration](https://drive.google.com/file/d/1kfBXfPy3vyhzYRsxmnQ5UvF__OSjv8bw/view)
 
 ## Usage --
-This is intended to create a simple logo so that a professional graphics designer is not needed. This is also for grading purposes.
+This is intended to take simple notes and easily track/delete them from a webpage. This is also for grading purposes.
 
 ## Acknowledgments
-Thank you to [express](https://www.npmjs.com/package/express) and [UUID](https://www.npmjs.com/package/uuid)for allowing me to use their package.
+Thank you to [express](https://www.npmjs.com/package/express) and [UUID](https://www.npmjs.com/package/uuid) for allowing me to use their packages.
 
 ## Support
 If you have any issues with this repo, shoot me an email at walterty89@gmail.com. 
