@@ -43,10 +43,6 @@ const saveNote = (note) =>
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(note)
-  })
-  .then(resp => resp.json())
-  .then(() => {
-    getNotes();
   }); 
 
 

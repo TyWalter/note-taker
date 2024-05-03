@@ -17,17 +17,15 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
   // Set the req.body which is title and text to variables title/text
   const {title, text} = req.body;
-  // Read data from database
-  const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
   // Create a unique id
   const id = uuidv4();
   // Create newNote with unique id, title, and text
   const newNote = {id, title, text};
   // Add to the array and rewrite the array with the new information
-  data.push(newNote);
-  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+  db.push(newNote);
+  fs.writeFile(dbPath, JSON.stringify(db, null, 2), (err) => err ? console.error(err) : console.log('success'));
   // Send the new information back
-  res.json(data);
+  res.json(db);
 });
 
 // router.put("/:id", (req, res) => {
@@ -35,17 +33,15 @@ router.post("/", (req, res) => {
 // });
 
 router.delete("/:id", (req, res) => {
-  // Read file and parse the information
-  const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
   // Look at data and find the index that matches the delete request
-  const noteIndex = data.findIndex(note => note.id === req.params.id);
+  const noteIndex = db.findIndex(note => note.id === req.params.id);
   // If it matches, remove it from the array and rewrite the array
   if(noteIndex !== -1){
-    data.splice(noteIndex, 1);
-    fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+    db.splice(noteIndex, 1);
+    fs.writeFile(dbPath, JSON.stringify(db, null, 2), (err) => err ? console.error(err) : console.log('success'));
     // Send the new information back
-    res.json(data);
   } 
+  res.json(db); 
 });
 
 // Exporting router
