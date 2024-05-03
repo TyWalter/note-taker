@@ -5,6 +5,10 @@ body {
   padding: 0;
 }
 
+.navbar-brand {
+  font-size: 2rem;
+}
+
 .save-note, .new-note, .clear-btn {
   display: none;
 }
@@ -63,6 +67,7 @@ body {
 .list-item-title {
   display: inline-block;
   width: 75%;
+  font-size: 1.5rem;
 }
 
 .list-container i {
