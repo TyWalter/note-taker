@@ -9,7 +9,7 @@ This note taker page is meant to jot down a note with a title and once submitted
 
 * [Link to video demonstration](https://drive.google.com/file/d/1kfBXfPy3vyhzYRsxmnQ5UvF__OSjv8bw/view)
 
-## Usage --
+## Usage
 This is intended to take simple notes and easily track/delete them from a webpage. This is also for grading purposes.
 
 ## Acknowledgments
